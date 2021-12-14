@@ -9,22 +9,26 @@
     <title>Ejercicio Evaluación intermedia Ico</title>
   </head>
   <body>
-    <form action="">
-      <h1>Juego Piedra, Papel y Tijera</h1>
-      <h2>Introduce aquí tu jugada</h2>
-      <select name="select" id="select" class="js_selectValue">
-        <option value="option-choose" disabled selected>
-          Seleccione su jugada
-        </option>
-        <option value="piedra">Piedra</option>
-        <option value="papel">Papel</option>
-        <option value="tijera">Tijera</option>
-      </select>
-      <button type="button" class="js_playBtn">Jugar</button>
-      <p class="js_textResult">¡Vamos a jugar!</p>
-      <p>Jugador: <span class="js_counterJugador">0</span></p>
-      <p>Computadora: <span class="js_counterOrdenador">0</span></p>
-    </form>
+    <main class="main">
+      <form class="form" action="">
+        <h1 class="title">Juego Piedra, Papel y Tijera</h1>
+        <h2 class="subtitle">Introduce aquí tu jugada</h2>
+        <select name="select" id="select" class="select_button js_selectValue">
+          <option value="option-choose" disabled selected>
+            Seleccione su jugada
+          </option>
+          <option value="piedra">Piedra</option>
+          <option value="papel">Papel</option>
+          <option value="tijera">Tijera</option>
+        </select>
+        <button type="button" class="button js_playBtn">Jugar</button>
+        <p class="info_text js_textResult">¡Vamos a jugar!</p>
+        <p class="counter">Jugador: <span class="js_counterJugador">0</span></p>
+        <p class="counter">
+          Computadora: <span class="js_counterOrdenador">0</span>
+        </p>
+      </form>
+    </main>
     <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>
