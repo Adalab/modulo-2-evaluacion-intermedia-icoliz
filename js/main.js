@@ -12,7 +12,6 @@ function getRandomNumber(max) {
 
 function changeNumIntoValue() {
   let computerOption = getRandomNumber(9);
-  console.log(computerOption);
   if (computerOption < 4) {
     computerOption = "piedra";
   } else if (computerOption >= 4 && computerOption <= 6) {
@@ -23,19 +22,46 @@ function changeNumIntoValue() {
   return computerOption;
 }
 
+// function updateCounter() {
+//   let counterJugadorNum = parseInt(counterJugador.innerHTML);
+//   let counterOrdenadorNum = parseInt(counterOrdenador.innerHTML);
+
+//   if (textResult.innerHTML === "¡Has ganado!") {
+//     counterJugadorNum += counterJugadorNum;
+//   } else if (textResult.innerHTML === "¡Has perdido!") {
+//     counterOrdenadorNum += counterOrdenadorNum;
+//   }
+// }
+
 function compareUserOption() {
-  const userOption = selectValue.value;
+  const myOption = selectValue.value;
   const computerOption = changeNumIntoValue();
-  if (userOption === computerOption()) {
-    console.log(`The number is... ${getRandomNumber()}`);
+
+  if (myOption === computerOption) {
+    textResult.innerHTML = "Empate";
+  } else if (myOption === "piedra" && computerOption === "papel") {
+    textResult.innerHTML = "¡Has perdido!";
+  } else if (myOption === "piedra" && computerOption === "tijera") {
+    textResult.innerHTML = "¡Has ganado!";
+  } else if (myOption === "papel" && computerOption === "piedra") {
+    textResult.innerHTML = "¡Has ganado!";
+  } else if (myOption === "papel" && computerOption === "tijera") {
+    textResult.innerHTML = "¡Has perdido!";
+  } else if (myOption === "tijera" && computerOption === "papel") {
+    textResult.innerHTML = "¡Has ganado!";
+  } else if (myOption === "tijera" && computerOption === "piedra") {
+    textResult.innerHTML = "¡Has perdido!";
   } else {
-    console.log(`try again`);
+    textResult.innerHTML = `Por favor, selecciona una opción para empezar a jugar`;
   }
+  console.log(`My option is ${myOption}`);
+  console.log(`Computer's option is ${computerOption}`);
+  //   updateCounter();
 }
 
 function handleClickBtn() {
   changeNumIntoValue();
-  //   compareUserOption();
+  compareUserOption();
 }
 
 playBtn.addEventListener("click", handleClickBtn);
