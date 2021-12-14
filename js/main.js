@@ -22,16 +22,16 @@ function changeNumIntoValue() {
   return computerOption;
 }
 
-let counterJugadorNum = parseInt(counterJugador.innerHTML);
-let counterOrdenadorNum = parseInt(counterOrdenador.innerHTML);
-
 function updateCounter() {
-  counterJugadorNum = 0;
-  counterOrdenadorNum = 0;
+  //   debugger;
+  let counterJugadorNum = parseInt(counterJugador.innerHTML);
+  let counterOrdenadorNum = parseInt(counterOrdenador.innerHTML);
 
   if (textResult.innerHTML === "¡Has ganado!") {
+    console.log("has ganadooooo");
     counterJugador.innerHTML = counterJugadorNum + 1;
   } else if (textResult.innerHTML === "¡Has perdido!") {
+    console.log("has perdido, try again");
     counterOrdenador.innerHTML = counterOrdenadorNum + 1;
   }
 }
