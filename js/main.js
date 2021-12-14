@@ -22,16 +22,19 @@ function changeNumIntoValue() {
   return computerOption;
 }
 
-// function updateCounter() {
-//   let counterJugadorNum = parseInt(counterJugador.innerHTML);
-//   let counterOrdenadorNum = parseInt(counterOrdenador.innerHTML);
+let counterJugadorNum = parseInt(counterJugador.innerHTML);
+let counterOrdenadorNum = parseInt(counterOrdenador.innerHTML);
 
-//   if (textResult.innerHTML === "¡Has ganado!") {
-//     counterJugadorNum += counterJugadorNum;
-//   } else if (textResult.innerHTML === "¡Has perdido!") {
-//     counterOrdenadorNum += counterOrdenadorNum;
-//   }
-// }
+function updateCounter() {
+  counterJugadorNum = 0;
+  counterOrdenadorNum = 0;
+
+  if (textResult.innerHTML === "¡Has ganado!") {
+    counterJugador.innerHTML = counterJugadorNum + 1;
+  } else if (textResult.innerHTML === "¡Has perdido!") {
+    counterOrdenador.innerHTML = counterOrdenadorNum + 1;
+  }
+}
 
 function compareUserOption() {
   const myOption = selectValue.value;
@@ -54,9 +57,9 @@ function compareUserOption() {
   } else {
     textResult.innerHTML = `Por favor, selecciona una opción para empezar a jugar`;
   }
-  console.log(`My option is ${myOption}`);
-  console.log(`Computer's option is ${computerOption}`);
-  //   updateCounter();
+  //   console.log(`My option is ${myOption}`);
+  //   console.log(`Computer's option is ${computerOption}`);
+  updateCounter();
 }
 
 function handleClickBtn() {
