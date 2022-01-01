@@ -10,11 +10,14 @@ let scoreJugador = 0;
 let scoreOrdenador = 0;
 let moves = 0;
 
-// Issue: make a function that replaces '.innerHTML' by using a parameter
+// ISSUE:
+// Make a function that replaces '.innerHTML' by using a parameter.
+// No la he usado al no ser lo más cómodo para este ejercicio...
+
 // function paintInnerHTML(element, content) {
 //   element.innerHTML = content;
 // }
-// paintInnerHTML(textResult, 'Hello');
+// paintInnerHTML(textResult, 'Fixed issue');
 
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
